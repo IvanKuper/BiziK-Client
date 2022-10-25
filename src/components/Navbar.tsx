@@ -1,20 +1,20 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { successMsg } from "../services/feedbackService";
-import { getBiz, getUser } from "../services/userService";
+import { getBiz } from "../services/userService";
 
 interface NavbarProps {}
 
 const Navbar: FunctionComponent<NavbarProps> = () => {
   const navigate = useNavigate();
-  // Removing Roken when Log Out
+
   const handleLogout = () => {
     sessionStorage.removeItem("token");
-    successMsg("Logged Out Successfully");
+    successMsg("Hope To See You Again");
     navigate("/");
   };
 
-  // Checks if User Is Business
+  // Checks if User Is Biz
   const [user, setUser] = useState<boolean>(false);
 
   useEffect(() => {
@@ -30,8 +30,8 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
       <nav className="navbar navbar-expand-lg navbar-dark ">
         <div className="container">
           <div className="navbar-brand navbar-title">
-            <NavLink className="nav-link text-white" to="/">
-              <img className="logo" src="/Logo.png" alt="" />
+            <NavLink className="nav-link text-white" to="/my-cards">
+              <img className="logo" src="/Logo.png" alt="logo" />
               <span className="bizName text-white">BiziK</span>
             </NavLink>
           </div>
@@ -65,7 +65,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item ">
                     <NavLink className="nav-link text-white" to="/about">
-                      <span>About Us</span>
+                      <span>About Bizik</span>
                     </NavLink>
                   </li>
                   {/* Business Visibile Links */}
@@ -91,12 +91,12 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
                           className="nav-link text-white"
                           to="/all-cards"
                         >
-                          <span>All BizCards</span>
+                          <span>All BiziK Cards</span>
                         </NavLink>
                       </li>
                       <li className="nav-item ">
                         <NavLink className="nav-link text-white" to="/profile">
-                          <span>Profile</span>
+                          <span>My Profile</span>
                         </NavLink>
                       </li>
                       <li className="nav-item">
@@ -104,8 +104,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
                           onClick={handleLogout}
                           className="btn btn-dark mt-1"
                         >
-                          <i className="fa-solid fa-arrow-right-from-bracket"></i>{" "}
-                          Log out
+                          Say Bye
                         </button>
                       </li>
                     </>

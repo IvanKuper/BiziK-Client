@@ -23,9 +23,9 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
   return (
     <>
       <Navbar />
-      <h1 className="text-center mt-5 mb-4">
-        <i className="fa-regular fa-address-card"></i> All BizCards{" "}
-        <span style={{ color: "#eeeeee" }}>({cards.length})</span>
+      <h1 className="text-center mt-3">
+        <i className="fa-solid fa-address-card"></i> All BiziK Cards
+        <span style={{ color: "#F4A261" }}>({cards.length})</span>
       </h1>
 
       <div className="container-fluid _AllCards w-75 mb-5">
@@ -39,7 +39,7 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
               onChange={(e) => setSearch(e.target.value)}
               type="text"
               className="form-control "
-              placeholder="Search Card..."
+              placeholder="Search Card Name"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
@@ -55,7 +55,7 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
                 return (
                   <div key={card.card_id} className="col-lg-4 card bizCard">
                     <div className="top">
-                      <div className="col-lg-11 text-center">
+                      <div className="col-lg-10 text-center">
                         <img
                           src={card.business_image}
                           className="card-img-top mx-auto"
@@ -63,7 +63,6 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
                         />
                       </div>
                     </div>
-
                     <div className="card-body overflow">
                       <h3 className="card-title text-center">
                         {card.business_name}
@@ -74,12 +73,10 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
                       </div>
                       <hr />
                       <div className="card-text mb-2 text-center">
-                        <i className="fa-solid fa-phone"></i>{" "}
                         {card.business_phone}
                       </div>
                       <hr />
                       <div className="card-text mb-2 text-center">
-                        <i className="fa-solid fa-location-dot"></i>{" "}
                         {card.business_adress}
                       </div>
                     </div>
@@ -88,7 +85,7 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
               })
           ) : (
             <>
-              <h4 className="text-center  mt-5">There are no Cards added..</h4>
+              <h4 className="text-center mt-5">No Cards Added Yet...</h4>
               <img
                 className="image mx-auto img-fluid"
                 src="nocards.png"

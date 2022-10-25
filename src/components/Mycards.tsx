@@ -13,18 +13,14 @@ const Mycards: FunctionComponent<MycardsProps> = () => {
   const [isBiz, setIsBiz] = useState<boolean>(false);
   const [isChanged, setIsChanged] = useState<boolean>(false);
   const handleDelete = (card: Card) => {
-    if (
-      window.confirm(
-        `${card.business_name} will be deleted permanently, are you sure?`
-      )
-    )
+    if (window.confirm(`${card.business_name} will be deleted, are you sure?`))
       deleteCard(card)
         .then(() => {
           setIsChanged(!isChanged);
-          successMsg(`${card.business_name} Deleted Successfully!`);
+          successMsg(`${card.business_name} Deleted!`);
         })
         .catch((err) => {
-          errorMsg("Something went wrong, Try agian.");
+          errorMsg("Something went wrong");
         });
   };
   const [card, setCard] = useState<Card[]>([]);
@@ -35,15 +31,15 @@ const Mycards: FunctionComponent<MycardsProps> = () => {
         setCard(result.data);
       })
       .catch((err) => {
-        errorMsg("Something went wrong, Try agian.");
+        errorMsg("Something went wrong");
       });
   }, [isChanged]);
   return (
     <>
       <Navbar />
-      <h1 className="text-center mt-5 mb-5">
-        <i className="fa-regular fa-address-card"></i> My BizCards
-        <span style={{ color: "#eeeeee" }}> ({card.length})</span>
+      <h1 className="text-center mt-3">
+        <i className="fa-solid fa-address-card"></i> My BiziK Cards
+        <span style={{ color: "#F4A261" }}> ({card.length})</span>
       </h1>
       <div className="container-fluid _AllCards w-75 mb-5">
         <div className="row allCards">
@@ -59,37 +55,24 @@ const Mycards: FunctionComponent<MycardsProps> = () => {
                         alt="..."
                       />
                     </div>
-                    {/* Edit / Delete Btns */}
+                    {/* Edit / Delete */}
                     {isBiz ? (
                       <div className="col-lg-0">
-                        <div className="dropdown">
-                          <div data-bs-toggle="dropdown">
-                            <img
-                              src="more.png"
-                              className="moreBtn"
-                              style={{ width: "1.5rem" }}
-                              alt=""
-                            />
-                          </div>
-                          <ul className="dropdown-menu">
-                            <li>
-                              <Link
-                                className="dropdown-item"
-                                to={`edit/${card._id}`}
-                              >
+                        <div className="">
+                          <ul className="menu">
+                            <button className="btn btn-dark w-100">
+                              <Link className="item" to={`edit/${card._id}`}>
                                 <i className="fa-regular fa-pen-to-square"></i>{" "}
-                                Edit Card
                               </Link>
-                            </li>
-                            <li>
+                            </button>
+                            <button className="btn btn-dark w-100">
                               <div
                                 onClick={() => handleDelete(card)}
-                                className="dropdown-item"
+                                className="item"
                               >
-                                <i className="fa-solid fa-trash-can"></i> Delete
-                                Card
+                                <i className="fa-solid fa-trash-can"></i>
                               </div>
-                            </li>
+                            </button>
                           </ul>
                         </div>
                       </div>
@@ -120,7 +103,7 @@ const Mycards: FunctionComponent<MycardsProps> = () => {
             })
           ) : (
             <>
-              <h4 className="text-center mt-5">No Cards added..</h4>
+              <h4 className="text-center mt-5">No Cards Added Yet...</h4>
               <img
                 className="image mx-auto img-fluid mt-5"
                 src="nocards.png"

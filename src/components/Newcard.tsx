@@ -20,21 +20,15 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
       business_image: "",
     },
     validationSchema: yup.object({
-      business_name: yup.string().required("Business Name is Required").min(2),
-      business_desc: yup
-        .string()
-        .required("Business Description is Required")
-        .min(2),
-      business_adress: yup
-        .string()
-        .required("Business Adress is Required")
-        .min(2),
+      business_name: yup.string().required(" Name is Required").min(2),
+      business_desc: yup.string().required(" Description is Required").min(2),
+      business_adress: yup.string().required(" Adress is Required").min(2),
       business_phone: yup
         .string()
-        .required("Business Phone is Required")
+        .required(" Phone is Required")
         .min(9)
         .max(12),
-      business_image: yup.string().required("Business Image is Required"),
+      business_image: yup.string().required(" Image is Required"),
     }),
     onSubmit: (values) => {
       addCard(values)
@@ -50,18 +44,15 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
   return (
     <>
       <Navbar />
+      <h1 className="text-center mt-3">
+        <i className="fa-solid fa-id-card"></i> Create New BiziK Card
+      </h1>
       <div className="container-fluid">
         <div className="row">
-          <div className="leftDiv col-lg-6">
+          {/* <div className="leftDiv col-lg-6">
             <img className="login" src="addcard.png" alt="" />
-          </div>
-          <div className="rightDivScreenFit col-lg-6">
-            <h1 className="text-center">
-              <i className="fa-regular fa-id-card"></i> Create New BizCard
-            </h1>
-            <p className="text-dark text-center mb-4">
-              Open BizCard for your business.
-            </p>
+          </div> */}
+          <div className="col-lg-12 mt-1">
             {/* FORM */}
             <form onSubmit={formik.handleSubmit}>
               <div className="form-floating mb-3 w-75 mx-auto">
@@ -69,7 +60,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                   id="business_name"
                   type="text"
                   className="form-control "
-                  placeholder="Business Name"
+                  placeholder=" Name"
                   name="business_name"
                   value={formik.values.business_name}
                   onChange={formik.handleChange}
@@ -81,7 +72,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                     {formik.errors.business_name}
                   </p>
                 ) : null}
-                <label htmlFor="floatingInput">Business Name</label>
+                <label htmlFor="floatingInput"> Name</label>
               </div>
 
               <div className="form-floating mb-3 w-75 mx-auto">
@@ -89,7 +80,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                   id="business_desc"
                   type="text"
                   className="form-control "
-                  placeholder="Business Description"
+                  placeholder=" Description"
                   name="business_desc"
                   value={formik.values.business_desc}
                   onChange={formik.handleChange}
@@ -101,7 +92,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                     {formik.errors.business_desc}
                   </p>
                 ) : null}
-                <label htmlFor="floatingInput">Business Description</label>
+                <label htmlFor="floatingInput"> Description</label>
               </div>
 
               <div className="form-floating mb-3 w-75 mx-auto">
@@ -109,7 +100,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                   id="business_adress"
                   type="text"
                   className="form-control "
-                  placeholder="Business Adress"
+                  placeholder=" Adress"
                   name="business_adress"
                   value={formik.values.business_adress}
                   onChange={formik.handleChange}
@@ -122,7 +113,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                     {formik.errors.business_adress}
                   </p>
                 ) : null}
-                <label htmlFor="floatingInput">Business Adress</label>
+                <label htmlFor="floatingInput"> Adress</label>
               </div>
 
               <div className="form-floating mb-3 w-75 mx-auto">
@@ -130,7 +121,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                   id="business_phone"
                   type="text"
                   className="form-control "
-                  placeholder="Business Phone"
+                  placeholder=" Phone"
                   name="business_phone"
                   value={formik.values.business_phone}
                   onChange={formik.handleChange}
@@ -143,7 +134,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                     {formik.errors.business_phone}
                   </p>
                 ) : null}
-                <label htmlFor="floatingInput">Business Phone</label>
+                <label htmlFor="floatingInput"> Phone</label>
               </div>
 
               <div className="form-floating mb-3 w-75 mx-auto">
@@ -151,7 +142,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                   id="business_image"
                   type="text"
                   className="form-control "
-                  placeholder="Business Image"
+                  placeholder=" Image"
                   name="business_image"
                   value={formik.values.business_image}
                   onChange={formik.handleChange}
@@ -164,7 +155,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                     {formik.errors.business_image}
                   </p>
                 ) : null}
-                <label htmlFor="floatingInput">Business Image</label>
+                <label htmlFor="floatingInput"> Image</label>
               </div>
 
               <div className="button mx-auto">

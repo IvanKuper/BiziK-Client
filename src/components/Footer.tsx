@@ -6,10 +6,29 @@ const Footer: FunctionComponent<FooterProps> = () => {
   return (
     <>
       <footer id="footer" className="">
-        <i className="socials fab fa-facebook fa-2x px-2"></i>
-        <i className="socials fab fa-instagram fa-2x px-2"></i>
-        <i className="socials fab fa-twitter fa-2x px-2"></i>
-        <i className="socials fas fa-envelope fa-2x px-2"></i>
+        <p>
+          <a
+            className="link"
+            href="https://www.linkedin.com/in/ivankuper/"
+            target="_blank"
+          >
+            <i className="socials fab fa-linkedin fa-1x px-2"></i>
+          </a>
+          <a
+            className="link"
+            href="https://github.com/IvanKuper"
+            target="_blank"
+          >
+            <i className="socials fab fa-github fa-1x px-2"></i>
+          </a>
+          <a
+            className="link"
+            href="https://www.linkedin.com/in/ivankuper/"
+            target="_blank"
+          >
+            <i className="socials fab fa-instagram fa-1x px-2"></i>
+          </a>
+        </p>
 
         <p className="mt-1">
           2022 BiziK website was developed and Designed by

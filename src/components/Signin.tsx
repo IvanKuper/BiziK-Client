@@ -28,7 +28,7 @@ const Signin: FunctionComponent<SigninProps> = () => {
       signin(values)
         .then((result) => {
           sessionStorage.setItem("token", result.data.token);
-          successMsg("You Signed in Successfully!");
+          successMsg("Hi, nice to meet you!");
           navigate("/all-cards");
         })
         .catch((err) => {
@@ -40,21 +40,15 @@ const Signin: FunctionComponent<SigninProps> = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          {/* LEFT DIV */}
-          <div className="leftDiv col-lg-6 col-sm-12">
-            <img className="login" src="signin.png" alt="" />
-          </div>
           {/* RIGHT DIV */}
           <div className="rightDiv col-lg-6">
             <Link className="center" to="/">
               <img className="big-logo mx-auto mb-5" src="logo.png" alt="" />
             </Link>
-            <h1 className="text-center">Welcome Back !</h1>
-            <h5 className="text-center mb-4">
-              Sign in with your BizCards Account
-            </h5>
+            <h1 className="text-center">Sign in with your BiziK Account !</h1>
+            {/* <h5 className="text-center mb-4"></h5> */}
             {/* DEMO USER ALERT */}
-            <div
+            {/* <div
               className="alert alert-success hidden mt-4 w-75 mx-auto"
               role="alert"
             >
@@ -64,7 +58,7 @@ const Signin: FunctionComponent<SigninProps> = () => {
                 </div>
                 <div>Email: bizik@bizik.com | Password: bizikbizik</div>
               </div>
-            </div>
+            </div> */}
             {/* FORM */}
             <form onSubmit={formik.handleSubmit}>
               <div className="form-floating mb-3 w-75 mx-auto">
@@ -99,7 +93,6 @@ const Signin: FunctionComponent<SigninProps> = () => {
                 />
                 {formik.touched.password && formik.errors.password ? (
                   <p className="text-danger mt-2">
-                    {" "}
                     <i className="fa-solid fa-circle-exclamation mx-1"></i>
                     {formik.errors.password}
                   </p>
@@ -112,17 +105,21 @@ const Signin: FunctionComponent<SigninProps> = () => {
                   type="submit"
                   className="btn btn-dark w-75  mt-1"
                 >
-                  Sign In
+                  Login
                 </button>
               </div>
 
               <p className="text-center mt-4">
-                New User?{" "}
+                New Account?
                 <Link className="link" to="/signup">
-                  Click to Sign Up
-                </Link>{" "}
+                  Click here to Register
+                </Link>
               </p>
             </form>
+          </div>
+          {/* LEFT DIV */}
+          <div className="leftDiv col-lg-6 col-sm-12">
+            <img className="login" src="login.svg" alt="" />
           </div>
         </div>
       </div>

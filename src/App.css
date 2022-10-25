@@ -1,14 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Fuzzy Bubbles", cursive;
 }
 
-#title,
 .navbar {
-  background-color: #ff914d;
+  background-color: #f4a261;
 }
 
 .big-text {
-  color: #252525;
+  color: #264653;
 }
 
 .login {
@@ -28,7 +28,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #ff914d;
+  background-color: #f4a261;
 }
 
 .rightDivScreenFit {
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #ff914d;
+  background-color: #f4a261;
 }
 
 .navbar-brand {
@@ -70,7 +70,7 @@
 }
 
 .name {
-  color: #ff914d;
+  color: #f4a261;
 }
 
 .name:hover {
@@ -124,8 +124,8 @@ h3 {
 
 .icon,
 .socials {
-  margin-bottom: 1rem;
-  color: #ff914d;
+  margin-top: 1rem;
+  color: #f4a261;
 }
 
 .icon:hover,
@@ -134,10 +134,6 @@ h3 {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
-
-/* .form-control {
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.17));
-} */
 
 a {
   text-decoration: none;
@@ -149,25 +145,25 @@ a {
 }
 
 .link {
-  color: black;
+  color: #264653;
   font-weight: bold;
 }
 
 .homeBtn {
-  width: 12rem;
+  width: 10rem;
 }
 
 .logo-img {
   margin: 5px;
 }
 
-.wave {
+.card {
   width: 100%;
 }
 
 #pricing {
   padding: 4% 15%;
-  background-color: #ff914d;
+  background-color: #f4a261;
   text-align: center;
 }
 
@@ -221,9 +217,12 @@ a {
 }
 
 #footer {
-  padding: 1.5%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
   text-align: center;
-  background-color: #252525;
+  background-color: black;
   color: white;
 }
 
@@ -251,11 +250,11 @@ a {
 }
 .avatar {
   margin: 0 auto;
-  margin: -82px auto 15px;
+  margin: -70px auto 15px;
   display: block;
 }
 .name {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
 }
 .position {
@@ -299,7 +298,7 @@ a {
 
 @media only screen and (max-width: 991px) {
   span {
-    color: black;
+    color: #264653;
   }
 
   .leftDiv {
@@ -318,14 +317,5 @@ a {
 
   ._AllCards {
     width: 100% !important;
-  }
-
-  .devicesImg {
-    display: none;
-  }
-
-  .homeBtn {
-    margin: 0.5rem 0 0 0;
-    width: 100%;
   }
 }

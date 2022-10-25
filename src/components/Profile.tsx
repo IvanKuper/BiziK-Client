@@ -25,34 +25,32 @@ const Profile: FunctionComponent<ProfileProps> = () => {
   return (
     <>
       <Navbar />
-      <h1 className="text-center mt-5 mb-3">
-        <i className="fa-solid fa-user mb-4"></i> Profile
+      <h1 className="text-center mt-3">
+        <i className="fa-solid fa-user"></i> Profile
       </h1>
       <div className=" container-fluid content">
         <div className="containerDiv card">
           <img
-            src="banner.jpg"
+            src="avatar.svg"
             alt="cookies"
             className="hero-image img-fluid"
           />
 
           <div className="information">
-            <img src="avatar.png" alt="avatar" className="avatar" />
-            <span className="mb-4">Currently Signed In As:</span>
-            <div className="name mb-3 ">{userProfile.name}</div>
+            <div className="name mt-3 ">{userProfile.name}</div>
             <hr />
             <div className="mb-2">
               <strong>Email: </strong>
               {userProfile.email}
             </div>
             <div className="mb-2">
-              <strong>Account Type: </strong>
+              <strong>Regular/Business </strong>
               {userProfile.biz ? (
                 <span style={{ color: "green" }}>
-                  Business Account <i className="fa-solid fa-square-check"></i>{" "}
+                  Business <i className="fa-solid fa-square-check"></i>
                 </span>
               ) : (
-                <span>Free Account </span>
+                <span>Regular </span>
               )}
             </div>
           </div>

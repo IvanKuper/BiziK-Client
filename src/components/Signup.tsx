@@ -52,17 +52,13 @@ const Signup: FunctionComponent<SignupProps> = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          {/* LEFT DIV */}
-          <div className="leftDiv col-lg-6 col-sm-12">
-            <img className="login" src="signup.png" alt="" />
-          </div>
           {/* RIGHT DIV */}
           <div className="rightDiv col-lg-6">
             <Link className="center" to="/">
               <img className="big-logo mx-auto mb-5" src="logo.png" alt="" />
             </Link>
-            <h1 className="text-center ">Create Account</h1>
-            <h5 className="text-center mb-4">Join BizCards for Free!</h5>
+            <h1 className="text-center ">Create Free Account</h1>
+            {/* <h5 className="text-center mb-4"></h5> */}
             {/* FORM */}
             <form onSubmit={formik.handleSubmit}>
               <div className="form-floating w-75 mb-3 mx-auto">
@@ -78,7 +74,6 @@ const Signup: FunctionComponent<SignupProps> = () => {
                 />
                 {formik.touched.name && formik.errors.name ? (
                   <p className="text-danger mt-2">
-                    {" "}
                     <i className="fa-solid fa-circle-exclamation mx-1"></i>
                     {formik.errors.name}
                   </p>
@@ -102,7 +97,7 @@ const Signup: FunctionComponent<SignupProps> = () => {
                     {formik.errors.email}
                   </p>
                 ) : null}
-                <label htmlFor="floatingInput">Email address</label>
+                <label htmlFor="floatingInput">Email</label>
               </div>
               <div className="form-floating mb-3 w-75 mx-auto">
                 <input
@@ -130,7 +125,7 @@ const Signup: FunctionComponent<SignupProps> = () => {
                   type="submit"
                   className="btn btn-dark w-75  mt-1"
                 >
-                  Sign Up
+                  Register
                 </button>
               </div>
               <div className="form-check form-switch mx-auto mt-4">
@@ -146,16 +141,20 @@ const Signup: FunctionComponent<SignupProps> = () => {
                   className="form-check-label mx-2"
                   htmlFor="flexSwitchCheckDefault"
                 >
-                  Sign up as Bussiness Account
+                  Swipe right if You are business
                 </label>
               </div>
               <p className="text-center mt-5">
-                Already have an account?{" "}
+                Already have an account?
                 <Link className="link" to="/signin">
-                  Click to Sign In
-                </Link>{" "}
+                  Click to Login
+                </Link>
               </p>
             </form>
+          </div>
+          {/* LEFT DIV */}
+          <div className="leftDiv col-lg-6 col-sm-12">
+            <img className="login" src="register.svg" alt="" />
           </div>
         </div>
       </div>
