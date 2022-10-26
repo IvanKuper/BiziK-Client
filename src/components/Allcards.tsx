@@ -25,15 +25,18 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
       <Navbar />
       <h1 className="text-center mt-3">
         <i className="fa-solid fa-address-card"></i> All BiziK Cards
-        <span style={{ color: "#F4A261" }}>({cards.length})</span>
+        <span style={{ color: "#F4A261" }}>
+          {" "}
+          <br /> [# of cards {cards.length}]
+        </span>
       </h1>
 
       <div className="container-fluid _AllCards w-75 mb-5">
         <div className="row allCards">
           {/* Search Input */}
-          <div className="input-group mx-auto mb-1">
+          <div className="input-group mx-auto mb-1 w-75">
             <span className="input-group-text" id="basic-addon1">
-              <i className="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-brands fa-searchengin"></i>
             </span>
             <input
               onChange={(e) => setSearch(e.target.value)}
@@ -63,20 +66,31 @@ const Cards: FunctionComponent<AllcardsProps> = () => {
                         />
                       </div>
                     </div>
+
                     <div className="card-body overflow">
                       <h3 className="card-title text-center">
                         {card.business_name}
                       </h3>
+                      <div className="button mx-auto">
+                        <button type="submit" className="btn btn-warning w-50 ">
+                          <a
+                            href="https://ivankuper.netlify.app/"
+                            target="_blank"
+                          >
+                            Visit Our Website
+                          </a>
+                        </button>
+                      </div>
                       <hr />
-                      <div className="card-text mb-2 mt-4 text-center">
+                      <div className="card-text mb-1 text-center">
                         {card.business_desc}
                       </div>
                       <hr />
-                      <div className="card-text mb-2 text-center">
+                      <div className="card-text mb-1 text-center">
                         {card.business_phone}
                       </div>
                       <hr />
-                      <div className="card-text mb-2 text-center">
+                      <div className="card-text mb-1 text-center">
                         {card.business_adress}
                       </div>
                     </div>

@@ -26,18 +26,18 @@ const Profile: FunctionComponent<ProfileProps> = () => {
     <>
       <Navbar />
       <h1 className="text-center mt-3">
-        <i className="fa-solid fa-user"></i> Profile
+        <i className="fa-solid fa-user"></i> My Profile
       </h1>
       <div className=" container-fluid content">
         <div className="containerDiv card">
           <img
-            src="avatar.svg"
+            src="profile1.svg"
             alt="cookies"
             className="hero-image img-fluid"
           />
 
           <div className="information">
-            <div className="name mt-3 ">{userProfile.name}</div>
+            <div className="name mt-5 ">{userProfile.name}</div>
             <hr />
             <div className="mb-2">
               <strong>Email: </strong>

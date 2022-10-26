@@ -31,11 +31,11 @@ const Footer: FunctionComponent<FooterProps> = () => {
         </p>
 
         <p className="mt-1">
-          2022 BiziK website was developed and Designed by
+          All rights reserved 2022 ©
           <strong>
             <a
               className="link"
-              href="https://www.linkedin.com/in/ivankuper/"
+              href="https://ivankuper.netlify.app/"
               target="_blank"
             >
               <span className="name"> Ivan Kuper.</span>

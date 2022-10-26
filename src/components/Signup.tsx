@@ -52,16 +52,13 @@ const Signup: FunctionComponent<SignupProps> = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          {/* RIGHT DIV */}
-          <div className="rightDiv col-lg-6">
+          <div className="rightDiv col-lg-12">
             <Link className="center" to="/">
               <img className="big-logo mx-auto mb-5" src="logo.png" alt="" />
             </Link>
-            <h1 className="text-center ">Create Free Account</h1>
-            {/* <h5 className="text-center mb-4"></h5> */}
-            {/* FORM */}
+            <h1 className="text-center ">Create Free Account Now!</h1>
             <form onSubmit={formik.handleSubmit}>
-              <div className="form-floating w-75 mb-3 mx-auto">
+              <div className="form-floating w-50 mb-3 mx-auto">
                 <input
                   id="name"
                   type="text"
@@ -80,7 +77,7 @@ const Signup: FunctionComponent<SignupProps> = () => {
                 ) : null}
                 <label htmlFor="floatingPassword">Name</label>
               </div>
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="email"
                   type="email"
@@ -99,7 +96,7 @@ const Signup: FunctionComponent<SignupProps> = () => {
                 ) : null}
                 <label htmlFor="floatingInput">Email</label>
               </div>
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="password"
                   type="password"
@@ -123,7 +120,7 @@ const Signup: FunctionComponent<SignupProps> = () => {
                 <button
                   disabled={!(formik.isValid && formik.dirty)}
                   type="submit"
-                  className="btn btn-dark w-75  mt-1"
+                  className="btn btn-dark w-50  mt-1"
                 >
                   Register
                 </button>
@@ -151,10 +148,6 @@ const Signup: FunctionComponent<SignupProps> = () => {
                 </Link>
               </p>
             </form>
-          </div>
-          {/* LEFT DIV */}
-          <div className="leftDiv col-lg-6 col-sm-12">
-            <img className="login" src="register.svg" alt="" />
           </div>
         </div>
       </div>

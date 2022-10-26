@@ -49,13 +49,10 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
       </h1>
       <div className="container-fluid">
         <div className="row">
-          {/* <div className="leftDiv col-lg-6">
-            <img className="login" src="addcard.png" alt="" />
-          </div> */}
           <div className="col-lg-12 mt-1">
             {/* FORM */}
             <form onSubmit={formik.handleSubmit}>
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="business_name"
                   type="text"
@@ -75,7 +72,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                 <label htmlFor="floatingInput"> Name</label>
               </div>
 
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="business_desc"
                   type="text"
@@ -95,7 +92,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                 <label htmlFor="floatingInput"> Description</label>
               </div>
 
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="business_adress"
                   type="text"
@@ -116,7 +113,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                 <label htmlFor="floatingInput"> Adress</label>
               </div>
 
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="business_phone"
                   type="text"
@@ -137,7 +134,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                 <label htmlFor="floatingInput"> Phone</label>
               </div>
 
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="business_image"
                   type="text"
@@ -162,7 +159,7 @@ const Newcard: FunctionComponent<NewcardProps> = () => {
                 <button
                   disabled={!(formik.isValid && formik.dirty)}
                   type="submit"
-                  className="btn btn-dark w-75  mt-1"
+                  className="btn btn-dark w-50  mt-1"
                 >
                   Create Card
                 </button>

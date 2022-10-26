@@ -41,27 +41,13 @@ const Signin: FunctionComponent<SigninProps> = () => {
       <div className="container-fluid">
         <div className="row">
           {/* RIGHT DIV */}
-          <div className="rightDiv col-lg-6">
+          <div className="rightDiv col-lg-12">
             <Link className="center" to="/">
               <img className="big-logo mx-auto mb-5" src="logo.png" alt="" />
             </Link>
-            <h1 className="text-center">Sign in with your BiziK Account !</h1>
-            {/* <h5 className="text-center mb-4"></h5> */}
-            {/* DEMO USER ALERT */}
-            {/* <div
-              className="alert alert-success hidden mt-4 w-75 mx-auto"
-              role="alert"
-            >
-              <div className="text-center">
-                <div className="fw-bold">
-                  <i className="fa-solid fa-circle-exclamation"></i> Demo Login
-                </div>
-                <div>Email: bizik@bizik.com | Password: bizikbizik</div>
-              </div>
-            </div> */}
-            {/* FORM */}
+            <h1 className="text-center">Login with your BiziK Account !</h1>
             <form onSubmit={formik.handleSubmit}>
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="email"
                   type="email"
@@ -80,7 +66,7 @@ const Signin: FunctionComponent<SigninProps> = () => {
                 ) : null}
                 <label htmlFor="floatingInput">Email address</label>
               </div>
-              <div className="form-floating mb-3 w-75 mx-auto">
+              <div className="form-floating mb-3 w-50 mx-auto">
                 <input
                   id="password"
                   type="password"
@@ -103,7 +89,7 @@ const Signin: FunctionComponent<SigninProps> = () => {
                 <button
                   disabled={!(formik.isValid && formik.dirty)}
                   type="submit"
-                  className="btn btn-dark w-75  mt-1"
+                  className="btn btn-dark w-50  mt-1"
                 >
                   Login
                 </button>
@@ -116,10 +102,6 @@ const Signin: FunctionComponent<SigninProps> = () => {
                 </Link>
               </p>
             </form>
-          </div>
-          {/* LEFT DIV */}
-          <div className="leftDiv col-lg-6 col-sm-12">
-            <img className="login" src="login.svg" alt="" />
           </div>
         </div>
       </div>

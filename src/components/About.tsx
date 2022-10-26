@@ -18,11 +18,9 @@ const About: FunctionComponent<AboutProps> = () => {
               When designed correctly, your business card reminds people of the
               first time you met and encourages those who are interested in your
               products or services to get back in touch or visit your website
-              for more information.products or services to get back in touch or
-              visit your website for more information.products or services to
-              get back in touch or visit your website for more
-              information.products or services to get back in touch or visit
-              your
+              for more information.With our custom business card printing
+              services, you can start designing for free and use our pre-made
+              business card designs that already include all the information.
             </p>
             <img className="image img-fluid" src="about2.svg" alt="" />
           </div>

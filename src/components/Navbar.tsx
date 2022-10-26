@@ -63,12 +63,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
               </div>
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li className="nav-item ">
-                    <NavLink className="nav-link text-white" to="/about">
-                      <span>About Bizik</span>
-                    </NavLink>
-                  </li>
-                  {/* Business Visibile Links */}
+                  {/* Business Links */}
                   {user ? (
                     <>
                       <li className="nav-item ">
@@ -83,7 +78,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
                       </li>
                     </>
                   ) : null}
-                  {/* LogeedIn Visible Links */}
+                  {/* LogeedIn Links */}
                   {isLogged ? (
                     <>
                       <li className="nav-item ">
@@ -99,11 +94,17 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
                           <span>My Profile</span>
                         </NavLink>
                       </li>
+                      <li className="nav-item ">
+                        <NavLink className="nav-link text-white" to="/about">
+                          <span>About Bizik</span>
+                        </NavLink>
+                      </li>
                       <li className="nav-item">
                         <button
                           onClick={handleLogout}
                           className="btn btn-dark mt-1"
                         >
+                          <i className="fa-solid fa-person-walking-arrow-right"></i>
                           Say Bye
                         </button>
                       </li>
